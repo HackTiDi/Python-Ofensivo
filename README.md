@@ -93,11 +93,5 @@ Resultado:
 ## Requisitos
 
 * Python 3.x
-* Dependencias indicadas en `requirements.txt`
 * Privilegios de administrador/root para aquellas herramientas que interactúan directamente con interfaces de red.
 
----
-
-## Descargo de responsabilidad
-
-El autor no se responsabiliza por el uso indebido de estas herramientas. Utilízalas únicamente en laboratorios, máquinas propias o sistemas para los cuales cuentes con autorización.
