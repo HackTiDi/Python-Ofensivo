@@ -3,7 +3,7 @@ Diferentes Herramientas, diferentes propositos.
 
 ----------------------------------------------------------------------------------------------------------------------
 
-Mac Changers. 
+Mac Changers.\n
 El "MacChanger_spec" necesita que se le introduzca el numero de MAC por el que se lo quiere cambiar. Mientras que el "MacChanger_random", con solo especificar las interfaz de red, selecciona una direccion MAC random.
 
 ----------------------------------------------------------------------------------------------------------------------
