@@ -1,25 +1,103 @@
 # Python-Ofensivo
-Diferentes Herramientas, diferentes propositos.
 
-----------------------------------------------------------------------------------------------------------------------
+Colección de herramientas desarrolladas en Python para pruebas de seguridad ofensiva, análisis de redes y aprendizaje de técnicas de pentesting.
 
-Mac Changers.
+> **Aviso:** Todas las herramientas están destinadas exclusivamente a fines educativos y a su utilización en entornos propios o con autorización explícita.
 
-El "MacChanger_spec" necesita que se le introduzca el numero de MAC por el que se lo quiere cambiar. Mientras que el "MacChanger_random", con solo especificar las interfaz de red, selecciona una direccion MAC random.
+---
 
-----------------------------------------------------------------------------------------------------------------------
+## Herramientas incluidas
 
-Envenenador ARP y Sniffers.
+### MAC Changers
 
-Estas herramientas van en conjuntos ya que mientras se ejecuta el "ARP_spoofer". Los demas, como "DNS_sniffer", sirven para filtrar la informacion que se puede extraer de los paquetes de red.
+Permiten modificar la dirección MAC de una interfaz de red.
 
-----------------------------------------------------------------------------------------------------------------------
+#### MacChanger_spec.py
 
-Scanners de red y puertos.
+Cambia la dirección MAC por una especificada manualmente por el usuario.
 
-"Red_scanner" Sirve para scannear los host conectados a la red en la cual tiene conectividad. Ex: python3 Red_scanner.py -t 192.168.100.1-255 | Escaneara los host conectados a tu red de la 1 a la 255.
-"Port_scan" Sirve para scanear los puertos abiertos de una red. Ex: python3 Port_scan.py -t 192.168.100.XX -p 1-65535 | Escaneara los puertos que esten abiertos entre 1 y 65535. | -p 22, 80 | Escaneara si el puerto 22 y/o el 80 estan abiertos.
+Ejemplo:
 
-----------------------------------------------------------------------------------------------------------------------
-...
+```bash
+python3 MacChanger_spec.py -i eth0 -m 00:11:22:33:44:55
+```
 
+#### MacChanger_random.py
+
+Genera y asigna automáticamente una dirección MAC aleatoria. Solo es necesario indicar la interfaz de red.
+
+Ejemplo:
+
+```bash
+python3 MacChanger_random.py -i eth0
+```
+
+---
+
+### ARP Spoofing y Sniffers
+
+Estas herramientas están diseñadas para utilizarse en conjunto.
+
+#### ARP_spoofer.py
+
+Realiza un ataque de ARP Spoofing (Man-in-the-Middle), redirigiendo el tráfico entre los dispositivos de la red.
+
+Mientras esta herramienta se encuentra en ejecución, es posible utilizar los sniffers para inspeccionar la información que circula por la red.
+
+#### DNS_sniffer.py
+
+Captura y muestra las consultas DNS realizadas por los equipos de la red.
+
+---
+
+### Escáneres de red y puertos
+
+#### Red_scanner.py
+
+Escanea un rango de direcciones IP para identificar los hosts activos dentro de una red.
+
+Ejemplo:
+
+```bash
+python3 Red_scanner.py -t 192.168.100.1-255
+```
+
+Resultado:
+
+* Escaneará las direcciones desde `192.168.100.1` hasta `192.168.100.255` e identificará los dispositivos activos.
+
+---
+
+#### Port_scan.py
+
+Escanea los puertos abiertos de un host.
+
+Escanear todos los puertos:
+
+```bash
+python3 Port_scan.py -t 192.168.100.10 -p 1-65535
+```
+
+Escanear puertos específicos:
+
+```bash
+python3 Port_scan.py -t 192.168.100.10 -p 22,80
+```
+
+Resultado:
+
+* Verifica si los puertos indicados se encuentran abiertos en el host objetivo.
+
+---
+
+## Requisitos
+
+* Python 3.x
+* Dependencias indicadas en `requirements.txt`
+* Privilegios de administrador/root para aquellas herramientas que interactúan directamente con interfaces de red.
+
+---
+
+## Descargo de responsabilidad
+
+El autor no se responsabiliza por el uso indebido de estas herramientas. Utilízalas únicamente en laboratorios, máquinas propias o sistemas para los cuales cuentes con autorización.
