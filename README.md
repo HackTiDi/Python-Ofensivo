@@ -1,6 +1,6 @@
 # Python-Ofensivo
 
-Colección de herramientas desarrolladas en Python para pruebas de seguridad ofensiva, análisis de redes y aprendizaje de técnicas de pentesting.
+Mis herramientas desarrolladas en Python para pruebas de seguridad ofensiva.
 
 > **Aviso:** Todas las herramientas están destinadas exclusivamente a fines educativos y a su utilización en entornos propios o con autorización explícita.
 
