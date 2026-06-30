@@ -68,7 +68,7 @@ Captura y muestra las consultas DNS realizadas por los equipos de la red. Simple
 
 #### HTTPS_sniffer.py
 
-Se requiere control previo del dispositivo a analizar para asi descargar certificaciones de MITMProxy. (Para la ejecucion de este script es necesario tener instalado MITMProxy por fuera de python)
+Se requiere control previo del dispositivo a analizar para asi descargar certificaciones de MITMProxy y tener su proxy configurado. (Para la ejecucion de este script es necesario tener instalado MITMProxy por fuera de python)
 
 ```bash
 mitmproxy/mitmdump -s HTTPS_sniffer.py --quiet
