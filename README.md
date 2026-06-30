@@ -54,6 +54,8 @@ Realiza un ataque de ARP Spoofing (Man-in-the-Middle), redirigiendo el tráfico 
 
 Mientras esta herramienta se encuentra en ejecución, es posible utilizar los sniffers para inspeccionar la información que circula por la red.
 
+Para esta herramienta es necesario tener la direccion MAC asignada a: "aa:bb:cc:44:55:66", de lo contrario el programa no funcionara correctamente.
+
 Ejemplo:
 
 ```bash
