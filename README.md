@@ -8,6 +8,16 @@ Mis herramientas desarrolladas en Python para pruebas de seguridad ofensiva.
 
 ## Herramientas incluidas
 
+### Requirements
+
+Cada carpeta contiene su respectivos "requirements.txt". Para instalarlos ejecute el siguiente comando:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
 ### MAC Changers
 
 Permiten modificar la dirección MAC de una interfaz de red.
