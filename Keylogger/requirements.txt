@@ -1,0 +1,6 @@
+threading
+pynput
+sys
+termcolor
+signal
+smtplib
