@@ -64,6 +64,14 @@ python3 ARP_spoofer.py -t 192.168.100.1
 
 Captura y muestra las consultas DNS realizadas por los equipos de la red. Simplemente ejecutalo y el script hara todo.
 
+#### HTTPS_sniffer.py
+
+Se requiere control previo del dispositivo a analizar para asi descargar certificaciones de MITMProxy. (Para la ejecucion de este script es necesario tener instalado MITMProxy por fuera de python)
+
+```bash
+mitmproxy/mitmdump -s HTTPS_sniffer.py --quiet
+```
+
 ---
 
 ### Escáneres de red y puertos
