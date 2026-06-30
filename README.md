@@ -54,9 +54,15 @@ Realiza un ataque de ARP Spoofing (Man-in-the-Middle), redirigiendo el tráfico 
 
 Mientras esta herramienta se encuentra en ejecución, es posible utilizar los sniffers para inspeccionar la información que circula por la red.
 
+Ejemplo:
+
+```bash
+python3 ARP_spoofer.py -t 192.168.100.1
+```
+
 #### DNS_sniffer.py
 
-Captura y muestra las consultas DNS realizadas por los equipos de la red.
+Captura y muestra las consultas DNS realizadas por los equipos de la red. Simplemente ejecutalo y el script hara todo.
 
 ---
 
